@@ -8,8 +8,10 @@
 </head>
 <body>
     <div class="container">
-        <header style=" position: relative; justify-content: center;">
-            <p><h1>HARUTYUNYAN YURI</h1></p>
+        <header id="header" class="header big-screen">
+            <div>
+                <p><h1>HARUTYUNYAN YURI</h1></p>
+            </div>
             <div>
                 <p >Git: <a href="https://github.com/YurHarutyunyan">YurHarutyunyan</a></p>
                 <p>Email: <a href="mailto:yharutyunyan0@gmail.com">yurharutyunyan83@gmail.com</a></p>
@@ -63,5 +65,18 @@
             <p>Armenian, English, Russian</p>
         </section>
     </div>
+    
+    <script>
+        function applySmallScreenStyles(){
+            let header = document.getElementById("header");
+            if(window.innerWidth<715){
+                header.classList.remove('big-screen')
+            }else{
+                header.classList.add('big-screen')
+            }
+        }
+        applySmallScreenStyles();
+        window.addEventListener('resize',applySmallScreenStyles);
+    </script>
 </body>
 </html>
