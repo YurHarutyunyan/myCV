@@ -8,8 +8,10 @@
 </head>
 <body>
     <div class="container">
-        <header style="display:flex; position: relative; overflow: hidden; justify-content: space-between;">
-            <h1>HARUTYUNYAN YURI</h1>
+        <header id="header" class="header big-screen" style="display:flex; position: relative; overflow: hidden; justify-content: space-between;">
+            <div>
+                <p><h1>HARUTYUNYAN YURI</h1></p>
+            </div>
             <div>
                     <p >GitHub Account: <a href="https://github.com/YurHarutyunyan">YurHarutyunyan</a></p>
                     <p> CodeWars Profile : <a href ="https://www.codewars.com/users/YuriHarutyunyan">YuriHarutyunyan</a></p>
@@ -21,7 +23,7 @@
         </section>
         <section>
             <h2>Qualifications</h2>
-            <p>Known Languages:<strong> JavaScript, Typescript, HTML5, CSS3, Java</strong></p>
+            <p>Languages:<strong> JavaScript, Typescript, HTML5, CSS3, Java</strong></p>
             <p>Tools, Frameworks and Libraries :<strong>
                 react, redux,  
                 yarn, npm, pnpm, webpack, babel,
@@ -76,5 +78,18 @@
             </a> 
         </footer>
     </div>
+    
+    <script>
+        function applySmallScreenStyles(){
+            let header = document.getElementById("header");
+            if(window.innerWidth<715){
+                header.classList.remove('big-screen')
+            }else{
+                header.classList.add('big-screen')
+            }
+        }
+        applySmallScreenStyles();
+        window.addEventListener('resize',applySmallScreenStyles);
+    </script>
 </body>
 </html>

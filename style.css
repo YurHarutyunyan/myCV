@@ -23,6 +23,11 @@ header {
     text-align: center;
     padding-bottom: 10px;
     border-bottom: 2px solid #ccc;
+    position: relative; 
+    justify-content: center
+}
+.big-screen{
+    display:flex;
 }
 
 h1 {
