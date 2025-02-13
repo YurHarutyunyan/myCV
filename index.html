@@ -8,14 +8,14 @@
 </head>
 <body>
     <div class="container">
-        <header id="header" class="header big-screen" style="display:flex; position: relative; overflow: hidden; justify-content: space-between;">
+        <header id="header" class="header big-screen" style="position: relative; overflow: hidden; justify-content: space-between;">
             <div>
                 <p><h1>HARUTYUNYAN YURI</h1></p>
             </div>
             <div>
                     <p >GitHub Account: <a href="https://github.com/YurHarutyunyan">YurHarutyunyan</a></p>
                     <p> CodeWars Profile : <a href ="https://www.codewars.com/users/YuriHarutyunyan">YuriHarutyunyan</a></p>
-               </div>
+            </div>
         </header>
         <section>
             <h2>Work Experience</h2>
@@ -63,7 +63,7 @@
             <h2>Languages Spoken</h2>
             <p>Armenian, English, Russian</p>
         </section>
-        <footer style="display: flex; justify-content: space-between;">
+        <footer class = "footerWithButton" id = 'footerWithButton' style="justify-content: space-between;">
             <div>
             Contact Me :
                 <p>Email: <a href="mailto:yharutyunyan0@gmail.com">yurharutyunyan83@gmail.com</a></p>
@@ -81,11 +81,15 @@
     
     <script>
         function applySmallScreenStyles(){
+            console.log('hello')
             let header = document.getElementById("header");
+            let footer = document.getElementById('footerWithButton');
             if(window.innerWidth<715){
                 header.classList.remove('big-screen')
+                footer.classList.remove("footerWithButton")
             }else{
                 header.classList.add('big-screen')
+                footer.classList.add('footerWithButton')
             }
         }
         applySmallScreenStyles();
