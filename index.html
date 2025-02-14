@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container small-screen">
         <header id="header" class="header big-screen" style="position: relative; overflow: hidden; justify-content: space-between;">
             <div>
                 <p><h1>HARUTYUNYAN YURI</h1></p>
@@ -81,15 +81,19 @@
     
     <script>
         function applySmallScreenStyles(){
-            console.log('hello')
             let header = document.getElementById("header");
             let footer = document.getElementById('footerWithButton');
+            let container = document.getElementsByClassName('container')[0];
+            console.log(container);
             if(window.innerWidth<715){
                 header.classList.remove('big-screen')
                 footer.classList.remove("footerWithButton")
+                container.classList.add('small-screen')
             }else{
+                console.log('big one')
                 header.classList.add('big-screen')
                 footer.classList.add('footerWithButton')
+                container.classList.remove('small-screen')
             }
         }
         applySmallScreenStyles();
