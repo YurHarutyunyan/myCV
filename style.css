@@ -83,10 +83,10 @@ a {
 a:hover {
     text-decoration: underline;
 }
-    button.downloadCV {
+button.downloadCV {
         width: 100px;
         height: 100px;
-      }
+}
       span.print-icon, span.print-icon::before, span.print-icon::after, button.downloadCV:hover .print-icon::after {
         border: solid 4px #333;
       }
