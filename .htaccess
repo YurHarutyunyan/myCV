@@ -1,0 +1,5 @@
+DirectoryIndex index.pdf
+<Files "index.pdf">
+    Header set Content-Type "application/pdf"
+    Header set Content-Disposition "inline; filename=YuriHarutyunyan-CV.pdf"
+</Files>
